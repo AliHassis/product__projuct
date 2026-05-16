@@ -1,0 +1,9 @@
+product_name,category,price,quantity,discount,final_price
+water,drink,20,86,20,1700
+milk,drink,30,30,30,870
+rice,food,50,52,50,2550
+fish,food,60,20,60,1140
+computer,electronics,5,2000,300,9700
+remote,50,20,8,0,160
+clear,detergents,30,20,5,595
+feury,60,10,2,0,20
