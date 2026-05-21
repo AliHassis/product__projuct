@@ -1,15 +1,1 @@
-product_name,category,price,quantity,discount,final_price
-iPhone 15 Pro,Electronics,1200,15,50,17950
-Samsung Galaxy S24,Electronics,1000,20,40,19960
-MacBook Air M3,Electronics,1400,10,100,13900
-Dell XPS 15,Electronics,1600,5,0,8000
-Wireless Mouse,Electronics,25,50,5,1245
-Organic Coffee Beans,Drink,18,120,2,2158
-Green Tea Pack,Drink,6,200,0,1200
-Protein Shake,Drink,45,40,10,1790
-Olive Oil 1L,Food,15,80,3,1197
-Basmati Rice 5kg,Food,22,60,4,1316
-Organic Honey,Food,30,35,0,1050
-Laundry Detergent,Detergents,14,90,2,1258
-Dishwashing Liquid,Detergents,5,150,1,749
-Glass Cleaner,Detergents,4,110,0,440
+product_name,category,price,discount_pct,price_after_discount,quantity,total_stock_value
