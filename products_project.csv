@@ -1,1 +1,11 @@
 product_name,category,price,discount_pct,price_after_discount,quantity,total_stock_value
+iPhone 15,Electronics,1200,10,1080,5,5400
+Samsung S23,Electronics,1000,5,950,8,7600
+Office Chair,Furniture,200,20,160,10,1600
+Running Shoes,Sports,150,15,127.5,15,1912.5
+Coffee Machine,Appliances,300,10,270,4,1080
+Wireless Mouse,Accessories,25,0,25,20,500
+Desk Lamp,Furniture,40,10,36,12,432
+Gaming Keyboard,Electronics,80,5,76,7,532
+Bluetooth Speaker,Accessories,60,15,51,10,510
+Backpack,Accessories,45,10,40.5,15,607.5

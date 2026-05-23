@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import os
+import plotly.express as px  # إضافة مكتبة بلوتلي للرسوم التفاعلية
 
 # 1. إعدادات الصفحة
 st.set_page_config(page_title="Sales Dashboard Pro", page_icon="📊", layout="wide")
@@ -177,8 +178,24 @@ with tab_chart:
             
         with col_chart2:
             st.subheader("📊 نسبة القيمة المالية لكل قسم بالمستودع:")
-            # تجميع البيانات حسب القسم لإظهار الرسم التوضيحي الدائري
-            category_pie = df_filtered.groupby('category')['total_stock_value'].sum()
-            st.scatter_chart(category_pie, use_container_width=True)
+            # تجميع البيانات حسب القسم لإظهار الرسم التوضيحي الدائري التفاعلي
+            category_pie = df_filtered.groupby('category', as_index=False)['total_stock_value'].sum()
+            
+            # بناء الرسم الدائري بشكل عصري (Donut Chart)
+            fig = px.pie(
+                category_pie, 
+                values='total_stock_value', 
+                names='category',
+                hole=0.4,  # تجويف لجعل الشكل احترافي ومودرن
+                color_discrete_sequence=px.colors.qualitative.Safe
+            )
+            # ضبط محاذاة النص وإظهار النسب المئوية مع العناوين
+            fig.update_traces(textposition='inside', textinfo='percent+label')
+            fig.update_layout(
+                margin=dict(t=20, b=20, l=20, r=20),
+                showlegend=True
+            )
+            # عرض الرسم البياني الجديد
+            st.plotly_chart(fig, use_container_width=True)
     else:
         st.info("لا توجد بيانات كافية لعرض الرسم البياني.")
